@@ -1,17 +1,3 @@
-import requests
-
-url = "https://speedtest.poorhub.pro/cf.7z"
-output_file = "cf.7z"
-
-try:
-    response = requests.get(url, stream=True)
-    response.raise_for_status()
-
-    with open(output_file, 'wb') as file:
-        for chunk in response.iter_content(chunk_size=8192):
-            if chunk:
-                file.write(chunk)
-
-    print(f"File '{output_file}' downloaded successfully.")
-except requests.exceptions.RequestException as e:
-    print(f"Error downloading the file: {e}")
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dc9d8aa4359e3d70bb3a3b8568a35639c046cbf0d78064c3475f84b2bcd080d
+size 484
